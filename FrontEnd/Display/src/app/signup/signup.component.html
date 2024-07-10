@@ -1,0 +1,132 @@
+<section class="h-100">
+    <div class="container-fluid" style="background-image: url(../../assets/images//ssu.jpg); background-size: cover; background-repeat: no-repeat;height: 100vh;margin: 0%;padding: 0;" >
+        <div class="row-5 d-flex justify-content-center align-items-center h-100">
+            <div class="col col-md-8">
+                <div class="card" style="border-radius: .25rem;border-color: black;border-width: 2px;">
+                  <div class="row g-0">
+                    <div class="col-lg-6 d-none d-md-block">
+                      <img src="../../assets/images/sign2.jpg" alt="signup form" class="img-fluid"
+                      style="border-top-left-radius: .18rem; border-bottom-left-radius: .18rem; border-top-right-radius: .18rem; border-bottom-right-radius: .18rem;" />
+              </div>
+              <div class="col-md-6 align-items-center">
+                <div class="card-body">
+
+
+                                <form action="#" [formGroup]="signupForm" (ngSubmit)=" submitData()">
+                                  <div class="row g-0">
+                                    <div class="col text-center p-2 mb-3 bg-light">
+                                      <span class="fs-2">Sign Up</span>
+                                    </div>
+                                  </div>
+                                    <div class="form-group mb-2 ">
+                                      <label for="name" class="name">Name</label>
+                                        <span class="text-danger">*</span>
+                                        <input formControlName="name" type="name" id="name"
+                                            class="form-control form-control" />
+                                       <div id="nameerror" *ngIf="signupForm.controls['name'].invalid && signupForm.controls['name'].touched" >
+                                            <span class="text-danger" *ngIf="signupForm.controls['name'].errors?.['required']">Name required</span>
+                                            <span class="text-danger" *ngIf="signupForm.controls['name'].errors?.['pattern']">Name can only have alphabets</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-outline mb-2">
+                                      <label for="emailId">Email</label>
+                                      <span class="text-danger">*</span>
+                                      <input formControlName="emailId" type="emailId" id="emailId"
+                                          class="form-control form-control" />
+                                      <div id="passworderror" *ngIf="signupForm.controls['emailId'].invalid && signupForm.controls['emailId'].touched" >
+                                          <span class="text-danger" *ngIf="signupForm.controls['emailId'].errors?.['required']">Email Required</span>
+                                          <span class="text-danger" *ngIf="signupForm.controls['emailId'].errors?.['pattern']">Email Pattern Invalid</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row  mb-2">
+                                      <div class="col mb-2">
+                                        <label for="mobileNo">Mobile Number</label>
+                                        <span class="text-danger">*</span>
+                                        <input formControlName="mobileNo" type="number" id="mobileNo"
+                                            class="form-control form-control" />
+                                            <div id="numbererror" *ngIf="signupForm.controls['mobileNo'].invalid && signupForm.controls['mobileNo'].touched" >
+                                                <span class="text-danger" *ngIf="signupForm.controls['mobileNo'].errors?.['required']">Mobile Number required</span>
+                                                <span class="text-danger" *ngIf="signupForm.controls['mobileNo'].errors?.['pattern']">Mobile Number can  have only numbers and must be 10 digits</span>
+
+                                            </div>
+                                          </div>
+                                          <!-- <div class="col ps-3 mb-2">
+                                            <div class="m-1">Category
+                                            <span class="text-danger">*</span></div>
+                                            <div class="form-check form-check-inline">
+                                              <input type="radio" class="form-check-input"  id="User" name="category" value="User" (change)="onChange($event)" formControlName="category" checked/>
+                                              <label class="form-check-label" for="User">User</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                              <input type="radio" class="form-check-input"  id="Vendor" name="category" value="Vendor" (change)="onChange($event)" formControlName="category"/>
+                                              <label class="form-check-label" for="Vendor">Vendor</label>
+                                            </div> -->
+                                            <!-- <div *ngIf="(category?.touched || signupForm.submitted)&&category?.invalid" class="error">Category is required</div> -->
+
+                                          </div>
+
+                                    <!-- </div> -->
+
+                                    <div class="row  mb-2">
+                                      <div class="col  mb-2">
+                                        <label for="password">Password</label>
+                                        <span class="text-danger">*</span>
+                                        <input formControlName="password" type="password" id="password"
+                                            class="form-control form-control" />
+                                        <div id="passworderror" *ngIf="signupForm.controls['password'].invalid && signupForm.controls['password'].touched" >
+                                            <span class="text-danger" *ngIf="signupForm.controls['password'].errors?.['required']">password required</span>
+                                            <span class="text-danger" *ngIf="signupForm.controls['password'].errors?.['pattern']">passsword pattern invalid</span>
+
+                                          </div>
+                                        </div>
+                                        <div class="col  mb-2">
+                                          <label for="confirmPassword">Confirm Password</label>
+                                          <span class="text-danger">*</span>
+                                          <input formControlName="confirmPassword" type="password" id="confirmPassword"
+                                              class="form-control form-control" />
+                                          <div id="passworderror" *ngIf="signupForm.controls['confirmPassword'].invalid && signupForm.controls['confirmPassword'].touched" >
+                                              <span class="text-danger" *ngIf="signupForm.controls['confirmPassword'].errors?.['required']">password required</span>
+                                              <span class="text-danger" *ngIf="signupForm.controls['confirmPassword'].errors?.['pattern']">passsword pattern invalid</span>
+                                            </div>
+                                            </div>
+                                          </div>
+
+                                            <div class="pt-1 mb-2 btn-center">
+                                              <button (click)="submitData()" class="btn form-control btn-warning" type="button"
+                                                  >Register</button>
+                                              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-danger">{{errorMessage}}</span>
+                                              <div *ngIf="successMessage" class="text text-success" id="successMessage">
+                                                  <!-- SUCCESS MESSAGE COMES HERE -->{{successMessage}}
+                                              </div>
+
+                                              <p class="mt-2 mb-2" style="color: #393f81;">Already have an account?<a
+                                                  style="color: #393f81;" routerLink="/login"> Login here</a>
+                                          </p>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

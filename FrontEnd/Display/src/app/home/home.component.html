@@ -1,0 +1,24 @@
+    <div id="container">
+
+    <div class="dashboard-content">
+        <!-- <div class="dashboard-card" routerLink="/menupagehome">
+            <img class="card-image" src="../../assets/images/sip&bite.png">
+            <div class="card-detail">
+                <h6>SIP & BITE</h6>
+                <p>A Destination of Taste & Purity</p>
+
+            </div>
+
+        </div> -->
+        <div *ngFor="let vendor of vendor_list" class="dashboard-card" routerLink="/menupagehome" (click)="selected_vendor(vendor.vendorId)">
+
+            <img class="card-image" src="{{vendor.image}}">
+            <div class="card-detail">
+                <h6>{{vendor.vendor_name}}</h6>
+                <p>{{vendor.description}}</p>
+
+
+            </div>
+
+        </div>
+        </div>

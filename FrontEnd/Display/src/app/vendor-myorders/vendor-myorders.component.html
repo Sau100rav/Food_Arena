@@ -1,0 +1,33 @@
+
+<div class="dashboard-content">
+  <div class="card"  *ngFor="let order of ordered">
+    <div class="card-body">
+
+                <span
+                    class="fw-bold">Token No: <span class="color">{{order.orderId}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="fw-bold"> Customer Name: {{order.customerName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span
+                    class="fw-bold">Order Date: {{order.dateOfOrder | date}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span
+                    class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold">
+                    {{order.orderStatus}}</span>
+                <span
+
+                        class="fw-bold"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount: {{order.totalPrice | currency:'INR'}}</span>
+
+                  <button class="completedbtn" (click)="changeStatus(order.orderId) " *ngIf="showComplete(order.orderStatus)">Complete</button>
+                  <button class="completedbtn" (click)="viewDetail(order.orderId)">View Details</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+  

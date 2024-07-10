@@ -1,0 +1,15 @@
+<div class="dashboard">
+
+  <div class="dashboard-content">
+
+    <div *ngFor="let product of itemsArray" class="dashboard-card">
+
+      <img class="card-image" src={{product.image}}>
+      <div class="card-detail">
+        <h6>{{product.name | titlecase}}<span>{{product.price| round:2 | currency:'INR'}}</span></h6>
+        <p>{{product.description}}</p>
+        <button type="button" (click)="deleteMenu(product.productId)"
+        class="btn btn-primary">Delete</button>
+        <button type="button" (click)="Edit(product.productId)"
+        class="btn btn-primary">Edit</button>
+      </div>

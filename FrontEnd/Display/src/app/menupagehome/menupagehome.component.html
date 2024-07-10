@@ -1,0 +1,36 @@
+<!-- dashboard-->
+
+<div class="dashboard">
+
+  <div class="dashboard-content">
+
+    <div *ngFor="let product of selected_vendor_list" class="dashboard-card">
+
+      <img class="card-image" src={{product.image}}>
+      <div class="card-detail">
+        <h6>{{product.name | titlecase}}<span>{{product.price| round:2 | currency:'INR'}}</span></h6>
+        <p>{{product.description}}</p>
+        <p class="card-time"><span class="fas fa-clock"></span>{{getEstimatedTime(product.estimatedTime)}} mins
+        </p>
+      </div>
+
+      <!-- <button class="dec-button" (click)="decreaseItem()">-</button><span>0</span><button class="dec-button" (click)="increaseItem()">+</button>-->
+      <button type="button" (click)="addToCart(product.productId)" *ngIf="!itemQuantity(product.productId)"
+        class="btn btn-primary">Add To Cart</button>
+      <div *ngIf="itemQuantity(product.productId)" class="row d-flex">
+        <button id="minus" class=" col btn btn-link px-2" (click)="removeFromCart(product.productId)">
+          <i class="fas fa-minus"></i>
+        </button>
+        <h1 class="col">{{itemQuantity(product.productId)}}</h1>
+        <button id="plus" class=" col btn btn-link px-2" *ngIf="getMaxQuantity(product.productId,product.availableQuantity
+                )" (click)="addToCart(product.productId)">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button type="button" (click)="sendToCart()" routerLink="/checkout" class="proceed_to_cart btn-primary">Proceed To
+      cart</button>
+  </div>
+</div>

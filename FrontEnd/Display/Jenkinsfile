@@ -1,0 +1,27 @@
+pipeline {
+	agent any
+	tools {
+		nodejs "node"
+	}
+	stages{
+	  stage('Install Dependencies') {
+            steps {
+                // Install project dependencies using npm
+                bat "npm install"
+               
+            }
+        }
+	  stage('Build') {
+            steps {
+                // Building project using npm
+                bat "npm run build"
+            }
+         }
+	stage('Sonar Testing') {
+             steps {
+		bat "npm install sonar-scanner"
+		bat "npm run sonar"
+                 }
+         }
+    }
+}

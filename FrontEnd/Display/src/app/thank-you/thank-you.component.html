@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container1">
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div class="col-md-4">
+                <div class="border border-3 border-success"></div>
+                <div class="card  bg-white shadow p-5">
+                    <div class="mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75"
+                            fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <h1>Thank You !</h1>
+                        <p> Your Order is successfully Placed.</p>
+                        <p style="color:green">Your Token Number is : {{getToken()}}</p>
+                        <button class="btn btn-outline-success" routerLink="/home">Order More</button>
+                        <button class="btn btn-outline-success" (click)="viewOrderDetail(token)">Order Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+<!--
+        <div class="card">
+            <div class="card-body mx-4">
+              <div class="container">
+                <p class="my-5 mx-5" style="font-size: 30px;">Thank for your purchase</p>
+                <div class="row">
+                  <ul class="list-unstyled">
+                    <li class="text-black">John Doe</li>
+                    <li class="text-muted mt-1"><span class="text-black">Invoice</span> #12345</li>
+                    <li class="text-black mt-1">April 17 2021</li>
+                  </ul>
+                  <hr>
+                  <div class="col-xl-10">
+                    <p>Pro Package</p>
+                  </div>
+                  <div class="col-xl-2">
+                    <p class="float-end">$199.00
+                    </p>
+                  </div>
+                  <hr>
+                </div>
+                <div class="row">
+                  <div class="col-xl-10">
+                    <p>Consulting</p>
+                  </div>
+                  <div class="col-xl-2">
+                    <p class="float-end">$100.00
+                    </p>
+                  </div>
+                  <hr>
+                </div>
+                <div class="row">
+                  <div class="col-xl-10">
+                    <p>Support</p>
+                  </div>
+                  <div class="col-xl-2">
+                    <p class="float-end">$10.00
+                    </p>
+                  </div>
+                  <hr style="border: 2px solid black;">
+                </div>
+                <div class="row text-black">
+
+                  <div class="col-xl-12">
+                    <p class="float-end fw-bold">Total: $10.00
+                    </p>
+                  </div>
+                  <hr style="border: 2px solid black;">
+                </div>
+                <div class="text-center" style="margin-top: 90px;">
+                  <a><u class="text-info">View in browser</u></a>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+
+              </div>
+            </div>
+          </div> -->
+    </body>
+
+
+</html> 

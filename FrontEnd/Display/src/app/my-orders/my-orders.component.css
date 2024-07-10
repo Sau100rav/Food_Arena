@@ -1,0 +1,39 @@
+
+
+
+.completedbtn{
+  background-color: rgb(255, 174, 0);
+  border-radius: 10px;
+  font-weight: bold;
+
+
+}
+.completedbtn:hover{
+  cursor: pointer;
+}
+.qrcode{
+  margin-left: 55rem;
+  margin-top: -50%;
+
+}
+.qrdownload{
+  height: 3rem;
+  width:7rem;
+  background-color: green;
+  border-color: black;
+  border-radius: 5px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 61rem;
+  margin-top: 2rem;
+
+}
+.qrdownload:hover{
+  height: 3.2rem;
+  width:7.2rem;
+  background-color: red;
+}
+.qr{
+  color:white;
+  text-decoration: none;
+  text-align: center;
+}

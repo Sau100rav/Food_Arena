@@ -1,0 +1,141 @@
+<!-- <nav class="navbar navbar-expand-lg bg-gradient">
+  <div class="container-fluid bg">
+
+    <a class="navbar-brand text-white" href="#"><img src="../assets/images/logo.png" alt="Bootstrap">
+      FOS</a>
+    <div class="d-flex" id="">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+              <div class="cartIcon">
+              <i *ngIf="isDesiredUrl()" class="fas fa-shopping-cart">
+              <span class="cart-count">{{this.sharedServiceCartItemCountService.cartItemCount}}</span></i>
+              </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-white" href="#"><i class="fa fa-fw fa-user"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<!-- 
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand text-white"  href="/first">
+    <img src="../assets/images/logo.png" alt="Bootstrap">
+      FOS
+  </a>
+
+  <button class="navbar-toggler light" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><div class="cartIcon">
+          <i *ngIf="get_url()" class="fas fa-shopping-cart">
+          <span class="cart-count">{{get_cart_item_count()}}</span></i>
+          </div></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active text-white" href="/first"><i class="fa fa-fw fa-user"></i>Logout</a>
+      </li>
+    </ul>
+  </div>
+
+</nav> -->
+<!-- 
+
+<header>
+
+
+ <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/first"><img src="../assets/images/logo.png" alt="img">FOS</a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#!"></a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#!">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row" *ngIf="get_url()">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" routerLink="/first">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ -->
+<!--Main Navigation-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<header>
+  <!-- Navbar-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light gradient-custom">
+    <div class="container-fluid justify-content-center justify-content-md-between">
+      <div class="d-flex my-2 my-sm-0">
+        <a class="navbar-brand me-2 mb-1 d-flex justify-content-center" (click)="logoClick()">
+          <img src="../../assets/images/HL.png"  alt=""
+            loading="lazy" />
+        </a>
+
+      </div>
+
+      <ul class="navbar-nav flex-row">
+        
+        <!-- Badge -->
+        <li class="nav-item me-3 me-lg-0" *ngIf="get_url()">
+          <a class="nav-link" href="/checkout">
+            <span><i class="fas fa-shopping-cart"></i></span>
+            <span class="badge rounded-pill badge-notification bg-danger">{{this.sharedService.cartItemCount}}</span>
+          </a>
+        </li>
+        <li class="nav-item me-3 me-lg-1">
+          <button class="btn btn-danger" routerLink="/my-orders" *ngIf="checkUrl()">My-Orders</button>
+        </li>
+        <!-- <li class="nav-item me-3 me-lg-0" style="padding-right: 25px;">
+          <a class="nav-link" href="#">
+            <span class="d-none d-lg-inline-block" style="font-weight: bold;">Contact Us</span>
+            <i class="fas fa-envelope d-inline-block d-lg-none"></i>
+          </a>
+        </li> -->
+        <li class="nav-item me-3 me-lg-0">
+          <button class="btn btn-danger" routerLink="/first" *ngIf="checkLogout()">Logout</button>
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+ 
+  
+
+</header>
+<!--Main Navigation-->

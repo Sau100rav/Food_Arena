@@ -1,0 +1,129 @@
+
+.dashboard{
+    height:fit-content;
+    width:100%;
+    /* padding-right:10px;
+    padding-left:10px; */
+    background-image: url(../../assets/images/menubg.jpg);
+    background-attachment: fixed;
+    /* background-size:contain; */
+}
+.dashboard-banner{
+    width:85%;
+    height: 380px;
+    position: relative;
+    padding: 1rem;
+    border-radius:20px;
+    cursor:pointer;
+    margin-top: 0px;
+    margin-left:5%;
+}
+.dashboard-banner img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.banner-promo{
+    position:absolute;
+    color: white;
+    top:35%;
+    left:7%;
+    font-weight: 800;
+
+}
+.banner-promo:hover{
+    color:yellow;
+
+}
+
+.dashboard-content{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+    padding: 5rem 1rem 1rem 1rem;
+    
+}
+.dashboard-card{
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    border-radius: 15px;
+    position: relative;
+    height:100%;
+    width:100%;
+}
+
+.card-image{
+    width:100%;
+    height:150px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor:pointer
+}
+.card-image:hover{
+    transform: scale(1.1);
+}
+
+.card-detail{
+    padding:10px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.card-detail h6{ 
+    font-weight: bold;
+ }  
+
+.card-detail h6 span{
+    float:right;
+    font-family: 'Noto Sans', sans-serif;
+}
+.card-time{
+    color: darkgray;
+     font-size: 0.8rem;
+     padding-top:10px;
+     font-family: 'Noto Sans', sans-serif;
+}
+.btn{
+    margin:5px; 
+    height:3rem;
+    width:15rem;
+    background-color: rgb(243, 95, 37);
+    border-radius: 20px;
+    border-color: white;
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+    cursor:pointer;
+    align-items: center;
+
+}
+.btn:hover{
+    background-color: rgb(202, 25, 25);
+    transform: scale(1.1);
+}
+.cart_btn{
+    position: absolute;
+}
+.proceed_to_cart{
+    background-color: rgb(207, 4, 4);
+    
+    height:3rem;
+    width:15rem;
+    border-radius: 20px;
+    border-color: white;
+    margin:5% 40% 5% 40%;
+    color: rgb(255, 255, 255);
+    cursor:pointer;
+    /* position: relative; */
+}
+.proceed_to_cart:hover{
+    background-color: rgb(3, 58, 12);
+}
+#minus{
+    margin-left: 1rem;
+    border-radius: 90px;
+    height: 3rem; 
+}
+#plus{
+    margin-right: 1rem;
+    border-radius: 90px;
+    height: 3rem; 
+}

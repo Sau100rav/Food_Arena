@@ -1,0 +1,30 @@
+.card{
+
+  background-color: rgb(253, 198, 134);
+  box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+  border-radius: 15px;
+  position: relative;
+  height:100%;
+  width:100%;
+
+}
+.dashboard-content{
+  display:grid;
+
+  gap:15px;
+  padding: 5rem 1rem 1rem 1rem;
+
+}
+.color{
+  color:red;
+}
+.completedbtn{
+  background-color: rgb(255, 174, 0);
+  border-radius: 10px;
+  padding: .5%;
+  margin-left: 5%;
+  font-weight: bold;
+}
+.completedbtn:hover{
+  cursor: pointer;
+}
